@@ -1,0 +1,79 @@
+<%- include("partials/header")-%>
+
+
+<div class="row">
+    <img class="sarimg" src="images/nature.jpg" alt="error">
+<div class="h">
+  <h1 class="head1">Tales of Sarvesh</h1>
+  <h3 class="head2"><%=homeStartingContent%></h3>
+
+</div>
+
+
+
+
+<div class="sar2">
+  <img class="send-img" src="images/send.png" alt="error">
+<p class="sarp">“We are all stories in the end, just make it an interesting one eh?”</p>
+</div>
+
+
+
+
+
+
+
+<div id="about">
+<img class="abt-img" src="images/a.jpg" alt="error">
+
+<div class="about-1">
+  <h1>About</h1>
+<p><%=aboutContent%></p>
+</div>
+
+
+</div>
+
+
+
+<div class="container">
+  <div id="sar">
+  <img class="sarbook1" src="images/open-book.png" alt="error">
+    <h1 class="jo">Journals</h1>
+    <%for(var i=0;i<posts.length;i++){%>
+    <h1><%=posts[i].title%></h1>
+    <p class="journalp"><%=posts[i].content.substring(0,280)+"...."%><a href="/post/<%=posts[i]._id%>" >Read more</a></p>
+    <%}%>
+    <img class="sarbook" src="images/open-book.png" alt="error">
+  </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contact">
+<div class="contact-2">
+  <h1><%=contactContent%></h1>
+  <a href="https://www.instagram.com/__sarvesh__02/">  <img class="footimg" src="images/instagram.png" alt="error"></a>
+<p>Copyright  sarvalitia 2020</p>
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>
