@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://sarvesh2:Chithi1977@cluster0.qittl.mongodb.net/BlogDB" ,{ useNewUrlParser: true  ,useUnifiedTopology: true , useFindAndModify: false});
+mongoose.connect("mongodb://localhost:27017/BlogDB" ,{ useNewUrlParser: true  ,useUnifiedTopology: true , useFindAndModify: false});
 
 const journalSchema=new mongoose.Schema({
   title:String,
@@ -72,8 +72,8 @@ app.get("/post/:id",function(req,res){
   });
 });
 
-let port=process.env.PORT;
 
-app.listen(port, function() {
+
+app.listen(3000, function() {
   console.log("Server started ");
 });
